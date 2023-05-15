@@ -468,7 +468,7 @@ export function icuStart(
         // It is an nested ICU expression
         const icuIndex = nestedIcus.push(value as IcuExpression) - 1;
         // Replace nested ICU expression by a comment node
-        valueArr[j] = `<!--�${icuIndex}�-->`;
+        valueArr[j] = `\x3c!--�${icuIndex}�--\x3e`;
       }
     }
     bindingMask = parseIcuCase(
